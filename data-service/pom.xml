@@ -11,7 +11,7 @@
 	<groupId>com.doordash</groupId>
 	<artifactId>data-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>data-service</name>
 	<description>Demo project for Doordash</description>
 	<properties>
