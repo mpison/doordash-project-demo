@@ -34,14 +34,16 @@ change spring.datasource.username and spring.datasource.password as per your mys
 
 ### 4. Build and run the app using maven
 
+```
 cd data-service
 mvn package
 java -jar target/data-service-0.0.1-SNAPSHOT.jar
+```
 
 You can also run the app without packaging it using -
-
+```
 mvn spring-boot:run
-
+```
 ### 5. Test using POSTMAN or following CURL command
 
 ```
