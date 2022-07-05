@@ -19,8 +19,16 @@ import static com.doordash.dataservice.exceptions.common.DataServiceExceptionCom
 import static com.doordash.dataservice.service.common.DataServiceCommon.PHONE_DELIMITER;
 import static com.doordash.dataservice.service.common.DataServiceCommon.PHONE_NUMBER_PATTERN;
 
+
 public class PhoneNumberUtil {
 
+    /**
+     * Validates phone number if follows certain phone number format. This would return phoneNumberList in case found any.
+     *
+     * @param phoneNumberRequestDTO
+     * @param phoneNumbersList
+     * @throws DataServiceException
+     */
     public static void validatePhoneNumberRequest(@RequestBody @Valid PhoneNumberRequestDTO phoneNumberRequestDTO,
                                                   List<PhoneNumbers> phoneNumbersList)
             throws DataServiceException  {
@@ -51,6 +59,7 @@ public class PhoneNumberUtil {
     }
 
     /**
+     * validates if input phone number follows format (Home) ddd-ddd-dddd or (Cell) ddd-ddd-dddd
      *
      * @param phoneNumbers
      * @param prefix
@@ -87,6 +96,7 @@ public class PhoneNumberUtil {
     }
 
     /**
+     * Extracts phone number in input string and removes delimiters '-'
      *
      * @param phoneNumbers
      * @param prefix
@@ -104,6 +114,8 @@ public class PhoneNumberUtil {
     }
 
     /**
+     *
+     *  Extracts phone number in input string and removes delimiters '-'
      *
      * @param phoneNumbers
      * @param prefix
