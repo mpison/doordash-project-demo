@@ -7,3 +7,5 @@ CREATE TABLE IF NOT EXISTS PhoneNumbers(
   occurence bigint NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE UNIQUE INDEX id_pn_pt_index ON PhoneNumbers (id, phone_number, phone_type);
